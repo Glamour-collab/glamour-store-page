@@ -3,17 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#25D366">
+<meta name="theme-color" content="#123C36">
 
 <title>Glamour Beauty</title>
 <meta name="description" content="Glamour Beauty - تواصلي معنا عبر واتساب">
 
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 html,body{
   width:100%;
@@ -22,8 +18,10 @@ html,body{
 
 body{
   font-family:Arial,sans-serif;
-  background:linear-gradient(160deg,#fffaf7,#f8f0ec 55%,#fff);
-  color:#241c1a;
+  background:
+    radial-gradient(circle at 50% 10%,#2d7569 0%,transparent 38%),
+    linear-gradient(145deg,#123C36 0%,#1A4B43 50%,#0E332F 100%);
+  color:#fff;
   min-height:100vh;
   display:flex;
   justify-content:center;
@@ -61,79 +59,55 @@ h1{
 .subtitle{
   font-size:17px;
   line-height:1.8;
-  color:#665b58;
+  color:#DCECE8;
   margin-bottom:34px;
 }
 
-/* =========================
-   الزر الأوسط الدائري
-   ========================= */
-
+/* الزر العلوي الدائري */
 .page > .whatsapp{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
-
-  width:220px;
-  min-height:64px;
-
+  width:82px;
+  height:82px;
+  min-height:82px;
+  padding:0;
   margin:0 auto;
-
-  border-radius:50px;
+  border-radius:50%;
   background:#25D366;
   color:#fff;
-
   text-decoration:none;
-  font-size:18px;
-  font-weight:800;
-
-  box-shadow:0 10px 28px rgba(37,211,102,.28);
-
-  transition:
-    transform .12s ease,
-    background .12s ease,
-    box-shadow .12s ease;
-
+  box-shadow:0 12px 30px rgba(0,0,0,.25);
+  transition:transform .12s ease,background .12s ease;
   -webkit-tap-highlight-color:transparent;
 }
 
 .page > .whatsapp:active{
-  transform:scale(.94);
+  transform:scale(.93);
   background:#1ebe5d;
-  box-shadow:0 5px 14px rgba(37,211,102,.20);
 }
-
-/* أيقونة واتساب */
 
 .icon{
-  width:25px;
-  height:25px;
+  width:35px;
+  height:35px;
   fill:currentColor;
+  display:block;
 }
-
-/* النص أسفل الزر */
 
 .note{
   font-size:13px;
-  color:#8b817e;
+  color:#BFD9D3;
   margin-top:15px;
 }
 
-/* =========================
-   الزر السفلي الثابت
-   ========================= */
-
+/* الزر السفلي */
 .bottom{
   position:fixed;
   bottom:14px;
   left:50%;
-
   transform:translateX(-50%);
-
   width:calc(100% - 28px);
   max-width:450px;
-
   z-index:10;
 }
 
@@ -141,26 +115,17 @@ h1{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
-
+  gap:9px;
   width:100%;
   min-height:56px;
-
   border-radius:17px;
-
   background:#25D366;
   color:#fff;
-
   text-decoration:none;
   font-size:18px;
   font-weight:800;
-
-  box-shadow:0 8px 25px rgba(0,0,0,.15);
-
-  transition:
-    transform .12s ease,
-    background .12s ease;
-
+  box-shadow:0 8px 25px rgba(0,0,0,.28);
+  transition:transform .12s ease,background .12s ease;
   -webkit-tap-highlight-color:transparent;
 }
 
@@ -169,12 +134,14 @@ h1{
   background:#1ebe5d;
 }
 
-/* =========================
-   الشاشات الأكبر
-   ========================= */
+.bottom .icon{
+  width:21px;
+  height:21px;
+  fill:#fff;
+  flex:none;
+}
 
 @media(min-width:600px){
-
   body{
     padding-bottom:40px;
   }
@@ -187,19 +154,10 @@ h1{
 }
 </style>
 
-<!-- =================================================
-     PIXEL AREA
-     مكان جاهز لإضافة TikTok Pixel و Meta Pixel لاحقًا
-     لا يوجد أي Pixel يعمل حاليًا
-     ================================================= -->
-
+<!-- PIXEL AREA -->
 <!-- TikTok Pixel Code: ADD LATER -->
-
 <!-- Meta Pixel Code: ADD LATER -->
-
-<!-- =================================================
-     END PIXEL AREA
-     ================================================= -->
+<!-- END PIXEL AREA -->
 
 </head>
 
@@ -207,97 +165,55 @@ h1{
 
 <main class="page">
 
-  <div class="brand">
-    Glamour Beauty
-  </div>
+  <div class="brand">Glamour Beauty</div>
 
   <div class="line"></div>
 
-  <h1>
-    اكتشفي جمالك بطريقة مختلفة ✨
-  </h1>
+  <h1>اكتشفي جمالك بطريقة مختلفة ✨</h1>
 
   <p class="subtitle">
     يسعدنا تواصلك معنا<br>
-    اضغطي على الزر لمعرفة المزيد
+    اضغط على الزر لمعرفة المزيد
   </p>
 
-  <!-- =========================
-       زر واتساب الأوسط
-       ========================= -->
-
+  <!-- الزر العلوي الدائري -->
   <a
     class="whatsapp"
     href="https://wa.me/972567728417?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B4%D8%A7%D9%87%D8%AF%D8%AA%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D9%83%D9%85%20%D8%B9%D9%84%D9%89%20TikTok%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF."
     aria-label="تواصل معنا عبر واتساب"
     onclick="trackWhatsAppClick()"
   >
-
-    <svg
-      class="icon"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.35A10 10 0 1 0 12 2zm5.2 14.35c-.22.62-1.27 1.16-1.75 1.2-.45.04-1.02.06-1.65-.1-.38-.1-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.49-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.94.92-2.2c.23-.26.5-.32.67-.32h.48c.15 0 .36-.06.56.43.21.5.72 1.76.78 1.89.07.13.11.28.02.45-.08.18-.12.28-.25.43-.13.15-.27.33-.39.45-.13.13-.26.27-.11.52.15.26.66 1.09 1.42 1.76.98.87 1.81 1.14 2.07 1.27.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.26.35-.22.59-.13.25.09 1.57.74 1.84.87.26.13.44.2.51.31.06.12.06.67-.16 1.29z"/>
     </svg>
-
-    راسلنا عبر واتساب
-
   </a>
 
-  <div class="note">
-    رد سريع عبر واتساب
-  </div>
+  <div class="note">رد سريع عبر واتساب</div>
 
 </main>
 
-<!-- =========================
-     زر واتساب السفلي
-     ========================= -->
-
+<!-- الزر السفلي -->
 <div class="bottom">
-
   <a
     href="https://wa.me/972567728417?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B4%D8%A7%D9%87%D8%AF%D8%AA%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D9%83%D9%85%20%D8%B9%D9%84%D9%89%20TikTok%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF."
-    aria-label="تواصل معنا عبر واتساب"
+    aria-label="راسلنا عبر واتساب"
     onclick="trackWhatsAppClick()"
   >
-
-    <svg
-      class="icon"
-      viewBox="0 0 24 24"
-      aria-hidden="true"
-    >
-      <path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.35A10 10 0 1 0 12 2z"/>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.35A10 10 0 1 0 12 2zm5.2 14.35c-.22.62-1.27 1.16-1.75 1.2-.45.04-1.02.06-1.65-.1-.38-.1-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.49-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.94.92-2.2c.23-.26.5-.32.67-.32h.48c.15 0 .36-.06.56.43.21.5.72 1.76.78 1.89.07.13.11.28.02.45-.08.18-.12.28-.25.43-.13.15-.27.33-.39.45-.13.13-.26.27-.11.52.15.26.66 1.09 1.42 1.76.98.87 1.81 1.14 2.07 1.27.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.26.35-.22.59-.13.25.09 1.57.74 1.84.87.26.13.44.2.51.31.06.12.06.67-.16 1.29z"/>
     </svg>
 
-    تواصل معنا الآن
-
+    <span>راسلنا عبر واتساب</span>
   </a>
-
 </div>
 
 <script>
-/*
-==================================================
-WHATSAPP CONVERSION EVENT
-==================================================
-
-مكان جاهز لربط TikTok Pixel و Meta Pixel
-عند الضغط على أي زر واتساب.
-
-لا يوجد أي كود تتبع خارجي حاليًا.
-==================================================
-*/
-
 function trackWhatsAppClick(){
-
-  /* TikTok Event - ADD LATER */
+  // TikTok Event - ADD LATER
   // ttq.track('Contact');
 
-  /* Meta Event - ADD LATER */
+  // Meta Event - ADD LATER
   // fbq('track','Contact');
-
 }
 </script>
 
