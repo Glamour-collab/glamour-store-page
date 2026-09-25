@@ -144,4 +144,624 @@ body{
     position:relative;
     z-index:3;
     text-align:center;
-    max-width:750
+    max-width:750px;
+}
+
+.small-title{
+    display:inline-block;
+    background:#ffbf18;
+    color:#103f79;
+    padding:10px 30px;
+    border-radius:12px;
+    font-size:22px;
+    font-weight:900;
+    box-shadow:0 7px 0 #dc9410;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(48px,8vw,92px);
+    line-height:1;
+    font-weight:1000;
+    color:#fff;
+    text-shadow:
+        0 7px 0 #0954a7,
+        0 12px 20px rgba(0,50,120,.25);
+    margin-bottom:20px;
+}
+
+.hero h1 span{
+    color:#ffd72d;
+}
+
+.hero p{
+    color:#07519a;
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:28px;
+}
+
+.start-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:linear-gradient(180deg,#1499ff,#0871dd);
+    color:white;
+    text-decoration:none;
+    padding:17px 45px;
+    border-radius:50px;
+    font-size:22px;
+    font-weight:900;
+    border:4px solid white;
+    box-shadow:0 8px 0 #0753a3,0 14px 25px rgba(0,75,160,.25);
+    transition:.2s;
+}
+
+.start-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 0 #0753a3,0 18px 30px rgba(0,75,160,.3);
+}
+
+/* Decorative toys */
+
+.toy{
+    position:absolute;
+    z-index:2;
+    font-size:95px;
+    filter:drop-shadow(0 10px 8px rgba(0,60,120,.15));
+    animation:float 4s ease-in-out infinite;
+}
+
+.toy1{
+    left:6%;
+    bottom:70px;
+}
+
+.toy2{
+    right:6%;
+    bottom:70px;
+    animation-delay:1s;
+}
+
+.toy3{
+    left:15%;
+    top:80px;
+    font-size:60px;
+    animation-delay:.5s;
+}
+
+.toy4{
+    right:16%;
+    top:65px;
+    font-size:60px;
+    animation-delay:1.5s;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0) rotate(-2deg)}
+    50%{transform:translateY(-15px) rotate(2deg)}
+}
+
+/* ================= SECTION ================= */
+
+.games-section{
+    padding:70px 5% 80px;
+    background:#fff;
+    position:relative;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:42px;
+    color:#084c99;
+    font-weight:1000;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#66809d;
+    font-size:18px;
+    font-weight:600;
+}
+
+.section-title .line{
+    width:85px;
+    height:7px;
+    background:#ffc82e;
+    border-radius:20px;
+    margin:15px auto 0;
+}
+
+/* ================= CARDS ================= */
+
+.games-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+}
+
+.game-card{
+    min-height:190px;
+    border-radius:25px;
+    padding:22px 12px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    text-decoration:none;
+    color:#123b70;
+    position:relative;
+    overflow:hidden;
+    border:3px solid rgba(255,255,255,.8);
+    box-shadow:0 9px 20px rgba(40,100,150,.13);
+    transition:.3s;
+}
+
+.game-card:before{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    background:rgba(255,255,255,.25);
+    border-radius:50%;
+    top:-45px;
+    right:-35px;
+}
+
+.game-card:hover{
+    transform:translateY(-10px) rotate(-1deg);
+    box-shadow:0 18px 30px rgba(40,100,150,.2);
+}
+
+.game-icon{
+    font-size:65px;
+    margin-bottom:12px;
+    filter:drop-shadow(0 5px 3px rgba(0,0,0,.12));
+}
+
+.game-card h3{
+    font-size:18px;
+    font-weight:1000;
+}
+
+.arrow{
+    margin-top:12px;
+    width:32px;
+    height:32px;
+    border-radius:50%;
+    background:#126ce0;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:900;
+}
+
+.pink{background:#ffb3dc;}
+.green{background:#9aeb80;}
+.blue{background:#69d8ff;}
+.yellow{background:#ffd84c;}
+.purple{background:#bf8cff;}
+.cyan{background:#69ddd5;}
+
+/* ================= FEATURE ================= */
+
+.feature{
+    padding:65px 5%;
+    background:linear-gradient(135deg,#e9faff,#dff4ff);
+}
+
+.feature-box{
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    border-radius:35px;
+    padding:40px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:35px;
+    box-shadow:0 15px 40px rgba(20,100,160,.12);
+}
+
+.feature-text h2{
+    font-size:38px;
+    color:#084c99;
+    margin-bottom:15px;
+}
+
+.feature-text p{
+    color:#607c98;
+    line-height:1.9;
+    font-size:18px;
+    margin-bottom:22px;
+}
+
+.feature-list{
+    display:grid;
+    gap:12px;
+}
+
+.feature-list div{
+    background:#f1f8ff;
+    padding:13px 17px;
+    border-radius:15px;
+    font-weight:800;
+}
+
+.feature-art{
+    min-height:280px;
+    border-radius:30px;
+    background:linear-gradient(145deg,#65d8ff,#287bea);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:150px;
+    box-shadow:inset 0 -15px 30px rgba(0,0,0,.08);
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#073875;
+    color:white;
+    padding:35px 5% 25px;
+    text-align:center;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:1000;
+    margin-bottom:12px;
+}
+
+.footer-logo span{
+    color:#ffd52e;
+}
+
+.footer p{
+    color:#cce4ff;
+    margin-bottom:20px;
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.social a{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:white;
+    color:#0752a5;
+    border-radius:50%;
+    text-decoration:none;
+    font-size:20px;
+    transition:.2s;
+}
+
+.social a:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+.copy{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.15);
+    color:#a9c9e8;
+    font-size:13px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:1000px){
+
+    .games-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .nav{
+        display:none;
+    }
+
+    .header{
+        justify-content:center;
+    }
+
+    .search{
+        display:none;
+    }
+}
+
+@media(max-width:700px){
+
+    .header{
+        min-height:70px;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .hero{
+        min-height:560px;
+        padding:40px 20px;
+    }
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .small-title{
+        font-size:17px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .toy{
+        font-size:55px;
+    }
+
+    .toy3,.toy4{
+        font-size:40px;
+    }
+
+    .games-section{
+        padding:50px 18px;
+    }
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .games-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .game-card{
+        min-height:165px;
+    }
+
+    .game-icon{
+        font-size:53px;
+    }
+
+    .feature-box{
+        grid-template-columns:1fr;
+        padding:25px;
+    }
+
+    .feature-art{
+        min-height:220px;
+        font-size:110px;
+    }
+}
+
+@media(max-width:400px){
+
+    .games-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .game-card{
+        min-height:150px;
+    }
+
+    .game-icon{
+        font-size:45px;
+    }
+
+    .game-card h3{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo">
+        <span class="crown">👑</span>
+        🎮 كريم <span>أبو هين</span>
+    </div>
+
+    <nav class="nav">
+        <a href="#home" class="active">🏠 الرئيسية</a>
+        <a href="#games">🎮 الألعاب</a>
+        <a href="#sections">👥 الأقسام</a>
+        <a href="#about">✉️ اتصل بنا</a>
+    </nav>
+
+    <div class="search">
+        🔍
+        <input type="text" placeholder="ابحث عن لعبة...">
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="toy toy1">🎮</div>
+    <div class="toy toy2">🧸</div>
+    <div class="toy toy3">⭐</div>
+    <div class="toy toy4">🚀</div>
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            موقع الألعاب للأطفال
+        </div>
+
+        <h1>
+            كريم <span>أبو هين</span>
+        </h1>
+
+        <p>
+            🎮 العب .. تعلم .. واستمتع 🎮
+        </p>
+
+        <a href="#games" class="start-btn">
+            ابدأ الآن 🎮
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- GAMES -->
+<section class="games-section" id="games">
+
+    <div class="section-title">
+        <h2>أقسام الألعاب</h2>
+        <p>اختر اللعبة التي تحبها واستمتع بالمغامرة</p>
+        <div class="line"></div>
+    </div>
+
+    <div class="games-grid">
+
+        <a href="#" class="game-card pink">
+            <div class="game-icon">🧩</div>
+            <h3>ألعاب الذكاء</h3>
+            <div class="arrow">←</div>
+        </a>
+
+        <a href="#" class="game-card green">
+            <div class="game-icon">🏎️</div>
+            <h3>ألعاب السباق</h3>
+            <div class="arrow">←</div>
+        </a>
+
+        <a href="#" class="game-card blue">
+            <div class="game-icon">🏃</div>
+            <h3>ألعاب المغامرات</h3>
+            <div class="arrow">←</div>
+        </a>
+
+        <a href="#" class="game-card yellow">
+            <div class="game-icon">🎨</div>
+            <h3>ألعاب الرسم</h3>
+            <div class="arrow">←</div>
+        </a>
+
+        <a href="#" class="game-card purple">
+            <div class="game-icon">🦁</div>
+            <h3>ألعاب الحيوانات</h3>
+            <div class="arrow">←</div>
+        </a>
+
+        <a href="#" class="game-card cyan">
+            <div class="game-icon">⚽</div>
+            <h3>ألعاب الرياضة</h3>
+            <div class="arrow">←</div>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURE -->
+<section class="feature" id="sections">
+
+    <div class="feature-box">
+
+        <div class="feature-text">
+
+            <h2>🌟 عالم مليء بالمرح!</h2>
+
+            <p>
+                استكشف عالم كريم أبو هين واستمتع بمجموعة متنوعة
+                من الألعاب الممتعة والمغامرات الرائعة للأطفال.
+            </p>
+
+            <div class="feature-list">
+                <div>🎮 ألعاب ممتعة ومسلية</div>
+                <div>🧠 ألعاب تنمي الذكاء والتركيز</div>
+                <div>🚀 مغامرات وأفكار جديدة</div>
+            </div>
+
+        </div>
+
+        <div class="feature-art">
+            🧒🎮
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer" id="about">
+
+    <div class="footer-logo">
+        👑 كريم <span>أبو هين</span> 🎮
+    </div>
+
+    <p>
+        مع كريم أبو هين .. كل يوم مغامرة جديدة ⭐
+    </p>
+
+    <div class="social">
+        <a href="#">f</a>
+        <a href="#">▶</a>
+        <a href="#">◎</a>
+        <a href="#">♪</a>
+    </div>
+
+    <div class="copy">
+        © 2026 كريم أبو هين - جميع الحقوق محفوظة
+    </div>
+
+</footer>
+
+
+<script>
+
+/* البحث عن الألعاب */
+const searchInput = document.querySelector(".search input");
+const cards = document.querySelectorAll(".game-card");
+
+searchInput.addEventListener("input", function(){
+
+    const value = this.value.trim();
+
+    cards.forEach(card => {
+
+        const title = card.querySelector("h3").textContent;
+
+        if(title.includes(value) || value === ""){
+            card.style.display = "flex";
+        }else{
+            card.style.display = "none";
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
