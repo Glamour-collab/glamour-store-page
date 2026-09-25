@@ -9,23 +9,41 @@
 <meta name="description" content="Glamour Beauty - تواصلي معنا عبر واتساب">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-html,body{
+html,
+body{
   width:100%;
   min-height:100%;
 }
 
 body{
   font-family:Arial,sans-serif;
+
   background:
-    radial-gradient(circle at 50% 10%,#2d7569 0%,transparent 38%),
-    linear-gradient(145deg,#123C36 0%,#1A4B43 50%,#0E332F 100%);
+    radial-gradient(
+      circle at 50% 10%,
+      #2d7569 0%,
+      transparent 38%
+    ),
+    linear-gradient(
+      145deg,
+      #123C36 0%,
+      #1A4B43 50%,
+      #0E332F 100%
+    );
+
   color:#fff;
   min-height:100vh;
+
   display:flex;
   justify-content:center;
   align-items:center;
+
   padding:24px 16px 90px;
 }
 
@@ -45,8 +63,10 @@ body{
 .line{
   width:55px;
   height:3px;
+
   background:#25D366;
   border-radius:20px;
+
   margin:0 auto 30px;
 }
 
@@ -59,163 +79,372 @@ h1{
 .subtitle{
   font-size:17px;
   line-height:1.8;
+
   color:#DCECE8;
+
   margin-bottom:34px;
 }
 
-/* الزر العلوي الدائري */
+
+/* =====================================
+   الزر الأوسط الرئيسي
+   زر حقيقي — بروز + ظل + ضغط
+===================================== */
+
 .page > .whatsapp{
+
+  position:relative;
+
   display:flex;
   align-items:center;
   justify-content:center;
-  width:82px;
-  height:82px;
-  min-height:82px;
-  padding:0;
+
+  width:105px;
+  height:105px;
+
   margin:0 auto;
+  padding:0;
+
   border-radius:50%;
-  background:#25D366;
+  border:0;
+
+  background:
+    linear-gradient(
+      145deg,
+      #2ee873 0%,
+      #25D366 55%,
+      #20bd59 100%
+    );
+
   color:#fff;
   text-decoration:none;
-  box-shadow:0 12px 30px rgba(0,0,0,.25);
-  transition:transform .12s ease,background .12s ease;
+
+  /* بروز حقيقي */
+  box-shadow:
+
+    /* الحافة السفلية */
+    0 5px 0 #179b49,
+
+    /* الظل القريب */
+    0 8px 10px rgba(0,0,0,.20),
+
+    /* الظل المنتشر */
+    0 16px 24px rgba(0,0,0,.18),
+
+    /* إضاءة أعلى الزر */
+    inset 0 2px 2px rgba(255,255,255,.30),
+
+    /* عمق داخلي */
+    inset 0 -3px 4px rgba(0,0,0,.10);
+
+  transition:
+    transform .10s ease,
+    box-shadow .10s ease;
+
   -webkit-tap-highlight-color:transparent;
+
+  cursor:pointer;
 }
+
+
+/* تأثير الضغط الحقيقي */
 
 .page > .whatsapp:active{
-  transform:scale(.93);
-  background:#1ebe5d;
+
+  transform:
+    translateY(5px)
+    scale(.97);
+
+  box-shadow:
+
+    0 1px 0 #179b49,
+
+    0 4px 8px rgba(0,0,0,.20),
+
+    inset 0 2px 4px rgba(0,0,0,.12);
 }
 
-.icon{
-  width:35px;
-  height:35px;
+
+/* شعار واتساب الأوسط */
+
+.page > .whatsapp .icon{
+
+  width:44px;
+  height:44px;
+
   fill:currentColor;
+
   display:block;
 }
 
+
+/* النص تحت الزر */
+
 .note{
   font-size:13px;
+
   color:#BFD9D3;
+
   margin-top:15px;
 }
 
-/* الزر السفلي */
+
+/* =====================================
+   الزر السفلي
+   أكثر بروزًا وواضحًا
+===================================== */
+
 .bottom{
+
   position:fixed;
+
   bottom:14px;
   left:50%;
+
   transform:translateX(-50%);
+
   width:calc(100% - 28px);
   max-width:450px;
+
   z-index:10;
 }
 
+
 .bottom a{
+
+  position:relative;
+
   display:flex;
+
   align-items:center;
   justify-content:center;
+
   gap:9px;
+
   width:100%;
+
   min-height:56px;
+
+  padding:0 18px;
+
   border-radius:17px;
-  background:#25D366;
+  border:0;
+
+  background:
+    linear-gradient(
+      145deg,
+      #2ee873 0%,
+      #25D366 55%,
+      #20bd59 100%
+    );
+
   color:#fff;
+
   text-decoration:none;
+
   font-size:18px;
   font-weight:800;
-  box-shadow:0 8px 25px rgba(0,0,0,.28);
-  transition:transform .12s ease,background .12s ease;
+
+  /* بروز احترافي */
+  box-shadow:
+
+    /* الحافة السفلية */
+    0 5px 0 #179b49,
+
+    /* ظل قريب */
+    0 8px 12px rgba(0,0,0,.22),
+
+    /* ظل خارجي */
+    0 16px 26px rgba(0,0,0,.17),
+
+    /* إضاءة علوية */
+    inset 0 2px 2px rgba(255,255,255,.28),
+
+    /* عمق داخلي */
+    inset 0 -3px 4px rgba(0,0,0,.10);
+
+  transition:
+    transform .10s ease,
+    box-shadow .10s ease;
+
   -webkit-tap-highlight-color:transparent;
+
+  cursor:pointer;
 }
+
+
+/* تأثير الضغط */
 
 .bottom a:active{
-  transform:scale(.96);
-  background:#1ebe5d;
+
+  transform:
+    translateY(5px)
+    scale(.98);
+
+  box-shadow:
+
+    0 1px 0 #179b49,
+
+    0 4px 8px rgba(0,0,0,.20),
+
+    inset 0 2px 4px rgba(0,0,0,.12);
 }
+
+
+/* شعار واتساب السفلي */
 
 .bottom .icon{
-  width:21px;
-  height:21px;
+
+  width:26px;
+  height:26px;
+
   fill:#fff;
+
   flex:none;
+
+  display:block;
 }
 
+
+/* =====================================
+   الشاشات الأكبر
+===================================== */
+
 @media(min-width:600px){
+
   body{
     padding-bottom:40px;
   }
 
   .bottom{
+
     position:static;
+
     transform:none;
+
     margin:25px auto 0;
   }
 }
+
 </style>
-
-<!-- PIXEL AREA -->
-<!-- TikTok Pixel Code: ADD LATER -->
-<!-- Meta Pixel Code: ADD LATER -->
-<!-- END PIXEL AREA -->
-
 </head>
+
 
 <body>
 
+
 <main class="page">
 
-  <div class="brand">Glamour Beauty</div>
+
+  <div class="brand">
+    Glamour Beauty
+  </div>
+
 
   <div class="line"></div>
 
-  <h1>اكتشفي جمالك بطريقة مختلفة ✨</h1>
+
+  <h1>
+    اكتشفي جمالك بطريقة مختلفة ✨
+  </h1>
+
 
   <p class="subtitle">
     يسعدنا تواصلك معنا<br>
     اضغط على الزر لمعرفة المزيد
   </p>
 
-  <!-- الزر العلوي الدائري -->
+
+  <!-- =================================
+       الزر الأوسط
+  ================================== -->
+
   <a
     class="whatsapp"
+
     href="https://wa.me/972567728417?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B4%D8%A7%D9%87%D8%AF%D8%AA%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D9%83%D9%85%20%D8%B9%D9%84%D9%89%20TikTok%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF."
+
     aria-label="تواصل معنا عبر واتساب"
+
     onclick="trackWhatsAppClick()"
   >
-    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+
+    <svg
+      class="icon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+
       <path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.35A10 10 0 1 0 12 2zm5.2 14.35c-.22.62-1.27 1.16-1.75 1.2-.45.04-1.02.06-1.65-.1-.38-.1-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.49-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.94.92-2.2c.23-.26.5-.32.67-.32h.48c.15 0 .36-.06.56.43.21.5.72 1.76.78 1.89.07.13.11.28.02.45-.08.18-.12.28-.25.43-.13.15-.27.33-.39.45-.13.13-.26.27-.11.52.15.26.66 1.09 1.42 1.76.98.87 1.81 1.14 2.07 1.27.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.26.35-.22.59-.13.25.09 1.57.74 1.84.87.26.13.44.2.51.31.06.12.06.67-.16 1.29z"/>
+
     </svg>
+
   </a>
 
-  <div class="note">رد سريع عبر واتساب</div>
+
+  <div class="note">
+    رد سريع عبر واتساب
+  </div>
+
 
 </main>
 
-<!-- الزر السفلي -->
+
+<!-- =================================
+     الزر السفلي
+================================== -->
+
 <div class="bottom">
+
+
   <a
+
     href="https://wa.me/972567728417?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%B4%D8%A7%D9%87%D8%AF%D8%AA%20%D8%A5%D8%B9%D9%84%D8%A7%D9%86%D9%83%D9%85%20%D8%B9%D9%84%D9%89%20TikTok%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF."
+
     aria-label="راسلنا عبر واتساب"
+
     onclick="trackWhatsAppClick()"
   >
-    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+
+
+    <svg
+      class="icon"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+
       <path d="M12 2a10 10 0 0 0-8.66 15L2 22l5.17-1.35A10 10 0 1 0 12 2zm5.2 14.35c-.22.62-1.27 1.16-1.75 1.2-.45.04-1.02.06-1.65-.1-.38-.1-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.49-3.98-.13-.18-1.08-1.43-1.08-2.73s.68-1.94.92-2.2c.23-.26.5-.32.67-.32h.48c.15 0 .36-.06.56.43.21.5.72 1.76.78 1.89.07.13.11.28.02.45-.08.18-.12.28-.25.43-.13.15-.27.33-.39.45-.13.13-.26.27-.11.52.15.26.66 1.09 1.42 1.76.98.87 1.81 1.14 2.07 1.27.26.13.41.11.56-.07.15-.18.65-.76.82-1.02.17-.26.35-.22.59-.13.25.09 1.57.74 1.84.87.26.13.44.2.51.31.06.12.06.67-.16 1.29z"/>
+
     </svg>
 
-    <span>راسلنا عبر واتساب</span>
+
+    <span>
+      راسلنا عبر واتساب
+    </span>
+
+
   </a>
+
+
 </div>
 
-<script>
-function trackWhatsAppClick(){
-  // TikTok Event - ADD LATER
-  // ttq.track('Contact');
 
-  // Meta Event - ADD LATER
-  // fbq('track','Contact');
+<script>
+
+function trackWhatsAppClick(){
+
+  /*
+    مكان إضافة TikTok Pixel لاحقًا:
+    ttq.track('Contact');
+
+    ومكان Meta Pixel:
+    fbq('track','Contact');
+  */
+
 }
+
 </script>
+
 
 </body>
 </html>
