@@ -8,6 +8,90 @@
 <title>Glamour Beauty</title>
 <meta name="description" content="Glamour Beauty - تواصلي معنا عبر واتساب">
 
+<!-- =========================================
+     TikTok Pixel
+========================================= -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;
+  var ttq=w[t]=w[t]||[];
+
+  ttq.methods=[
+    "page","track","identify","instances","debug","on","off","once",
+    "ready","alias","group","enableCookie","disableCookie",
+    "holdConsent","revokeConsent","grantConsent"
+  ];
+
+  ttq.setAndDefer=function(t,e){
+    t[e]=function(){
+      t.push([e].concat(Array.prototype.slice.call(arguments,0)))
+    }
+  };
+
+  for(var i=0;i<ttq.methods.length;i++){
+    ttq.setAndDefer(ttq,ttq.methods[i]);
+  }
+
+  ttq.instance=function(t){
+    for(
+      var e=ttq._i[t]||[],n=0;
+      n<ttq.methods.length;
+      n++
+    ){
+      ttq.setAndDefer(e,ttq.methods[n]);
+    }
+    return e;
+  };
+
+  ttq.load=function(e,n){
+    var r="https://analytics.tiktok.com/i18n/pixel/events.js",
+        o=n&&n.partner;
+
+    ttq._i=ttq._i||{};
+    ttq._i[e]=[];
+    ttq._i[e]._u=r;
+    ttq._t=ttq._t||{};
+    ttq._t[e]=+new Date;
+    ttq._o=ttq._o||{};
+    ttq._o[e]=n||{};
+
+    n=document.createElement("script");
+    n.type="text/javascript";
+    n.async=!0;
+    n.src=r+"?sdkid="+e+"&lib="+t;
+
+    e=document.getElementsByTagName("script")[0];
+    e.parentNode.insertBefore(n,e);
+  };
+
+  ttq.load('DAR5QJRC77U17TEHSK10');
+  ttq.page();
+
+}(window, document, 'ttq');
+
+
+/* =========================================
+   TikTok Events
+========================================= */
+
+/* PageView:
+   يتم إرساله تلقائيًا بواسطة ttq.page()
+*/
+
+/* ViewContent:
+   عند تحميل محتوى الصفحة */
+ttq.track('ViewContent');
+
+
+/* InitiateCheckout:
+   عند ضغط العميل على زر WhatsApp */
+function trackWhatsAppClick(){
+
+  ttq.track('InitiateCheckout');
+
+}
+</script>
+
 <style>
 *{
   box-sizing:border-box;
@@ -88,7 +172,6 @@ h1{
 
 /* =====================================
    الزر الأوسط الرئيسي
-   زر حقيقي — بروز + ظل + ضغط
 ===================================== */
 
 .page > .whatsapp{
@@ -119,22 +202,16 @@ h1{
   color:#fff;
   text-decoration:none;
 
-  /* بروز حقيقي */
   box-shadow:
 
-    /* الحافة السفلية */
     0 5px 0 #179b49,
 
-    /* الظل القريب */
     0 8px 10px rgba(0,0,0,.20),
 
-    /* الظل المنتشر */
     0 16px 24px rgba(0,0,0,.18),
 
-    /* إضاءة أعلى الزر */
     inset 0 2px 2px rgba(255,255,255,.30),
 
-    /* عمق داخلي */
     inset 0 -3px 4px rgba(0,0,0,.10);
 
   transition:
@@ -145,9 +222,6 @@ h1{
 
   cursor:pointer;
 }
-
-
-/* تأثير الضغط الحقيقي */
 
 .page > .whatsapp:active{
 
@@ -164,9 +238,6 @@ h1{
     inset 0 2px 4px rgba(0,0,0,.12);
 }
 
-
-/* شعار واتساب الأوسط */
-
 .page > .whatsapp .icon{
 
   width:44px;
@@ -176,9 +247,6 @@ h1{
 
   display:block;
 }
-
-
-/* النص تحت الزر */
 
 .note{
   font-size:13px;
@@ -191,7 +259,6 @@ h1{
 
 /* =====================================
    الزر السفلي
-   أكثر بروزًا وواضحًا
 ===================================== */
 
 .bottom{
@@ -208,7 +275,6 @@ h1{
 
   z-index:10;
 }
-
 
 .bottom a{
 
@@ -245,22 +311,16 @@ h1{
   font-size:18px;
   font-weight:800;
 
-  /* بروز احترافي */
   box-shadow:
 
-    /* الحافة السفلية */
     0 5px 0 #179b49,
 
-    /* ظل قريب */
     0 8px 12px rgba(0,0,0,.22),
 
-    /* ظل خارجي */
     0 16px 26px rgba(0,0,0,.17),
 
-    /* إضاءة علوية */
     inset 0 2px 2px rgba(255,255,255,.28),
 
-    /* عمق داخلي */
     inset 0 -3px 4px rgba(0,0,0,.10);
 
   transition:
@@ -271,9 +331,6 @@ h1{
 
   cursor:pointer;
 }
-
-
-/* تأثير الضغط */
 
 .bottom a:active{
 
@@ -289,9 +346,6 @@ h1{
 
     inset 0 2px 4px rgba(0,0,0,.12);
 }
-
-
-/* شعار واتساب السفلي */
 
 .bottom .icon{
 
@@ -325,7 +379,6 @@ h1{
     margin:25px auto 0;
   }
 }
-
 </style>
 </head>
 
@@ -427,24 +480,6 @@ h1{
 
 
 </div>
-
-
-<script>
-
-function trackWhatsAppClick(){
-
-  /*
-    مكان إضافة TikTok Pixel لاحقًا:
-    ttq.track('Contact');
-
-    ومكان Meta Pixel:
-    fbq('track','Contact');
-  */
-
-}
-
-</script>
-
 
 </body>
 </html>
